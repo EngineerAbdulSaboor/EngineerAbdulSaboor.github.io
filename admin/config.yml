@@ -1,0 +1,148 @@
+backend:
+  name: github
+  repo: EngineerAbdulSaboor/EngineerAbdulSaboor.github.io
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: https://engineerabdulsaboor.github.io
+
+collections:
+
+  - name: "education"
+    label: "Education"
+    files:
+      - name: "education"
+        label: "Education"
+        file: "_data/education.yml"
+        fields:
+          - label: "Degree"
+            name: "degree"
+            widget: "string"
+
+          - label: "University"
+            name: "university"
+            widget: "string"
+
+          - label: "Description"
+            name: "description"
+            widget: "text"
+
+          - label: "University Photo"
+            name: "photo"
+            widget: "image"
+            required: false
+
+
+  - name: "internships"
+    label: "Internships"
+    folder: "_internships"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Internship Name"
+        name: "title"
+        widget: "string"
+
+      - label: "Details"
+        name: "description"
+        widget: "text"
+
+      - label: "Internship Report"
+        name: "report"
+        widget: "file"
+        required: false
+
+
+  - name: "certificates"
+    label: "Certificates"
+    folder: "_certificates"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Certificate Name"
+        name: "title"
+        widget: "string"
+
+      - label: "Certificate File"
+        name: "file"
+        widget: "file"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        required: false
+
+
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Project Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Project Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Project File"
+        name: "file"
+        widget: "file"
+        required: false
+
+
+  - name: "skills"
+    label: "Skills"
+    file: "_data/skills.yml"
+    fields:
+      - label: "Skills"
+        name: "skills"
+        widget: "list"
+        fields:
+          - label: "Skill Name"
+            name: "name"
+            widget: "string"
+
+          - label: "Description"
+            name: "description"
+            widget: "text"
+
+
+  - name: "about"
+    label: "About Me"
+    file: "_data/about.yml"
+    fields:
+      - label: "About Me"
+        name: "about"
+        widget: "text"
+
+
+  - name: "contact"
+    label: "Contact"
+    file: "_data/contact.yml"
+    fields:
+      - label: "Email"
+        name: "email"
+        widget: "string"
+
+      - label: "LinkedIn"
+        name: "linkedin"
+        widget: "string"
+        required: false
+
+      - label: "GitHub"
+        name: "github"
+        widget: "string"
+
+
+  - name: "cv"
+    label: "CV"
+    file: "_data/cv.yml"
+    fields:
+      - label: "CV File"
+        name: "file"
+        widget: "file"
